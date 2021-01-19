@@ -30,7 +30,7 @@ See partition and replica details:
 docker-compose exec broker kafka-topics --bootstrap-server localhost:9092 --describe --topic default_ksql_processing_log
 ```
 
-### Lab 1
+### Topic Lab
 
 ```
 $ kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 6 --topic inventory_purchases
@@ -53,3 +53,19 @@ product: apples, quantity: 5
 product: lemons, quantity: 7
 ```
 
+### Consumer Groups Labs
+
+Single consumer
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic inventory_purchases --group 1
+```
+
+
+Multiple consumers - multiple consumers work together to process all the messages one time between the both of them
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic inventory_purchases --group 2 > /home/cloud_user/output/group2_consumer1.txt
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic inventory_purchases --group 2 > /home/cloud_user/output/group2_consumer2.txt
+```
