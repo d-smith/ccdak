@@ -69,3 +69,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic inventory_purch
 
 kafka-console-consumer --bootstrap-server localhost:9092 --topic inventory_purchases --group 2 > /home/cloud_user/output/group2_consumer2.txt
 ```
+
+### Streams
+
+Starter project
