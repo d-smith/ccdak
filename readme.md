@@ -72,4 +72,10 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic inventory_purch
 
 ### Streams
 
-Starter project
+See sample.
+
+### Schema Registry
+
+See schema lab.
+
+[Schema Evolution](https://docs.confluent.io/platform/current/schema-registry/avro.html)
