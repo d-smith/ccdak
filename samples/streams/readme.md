@@ -26,3 +26,10 @@ docker-compose exec broker kafka-console-consumer --bootstrap-server localhost:9
 
 docker-compose exec broker kafka-console-consumer --bootstrap-server localhost:9092 --topic outer-join-output-topic --property print.key=true
 ```
+
+
+### Windows
+
+docker-compose exec broker kafka-console-producer --broker-list localhost:9092 --topic windowing-input-topic  --property parse.key=true --property key.separator=:
+
+docker-compose exec broker kafka-console-consumer --bootstrap-server localhost:9092 --topic windowing-output-topic --property print.key=true
